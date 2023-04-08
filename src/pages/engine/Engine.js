@@ -3,10 +3,12 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from "../../utils/axios";
 
+import Card from "../../components/card/Card";
+
 const Engine = () => {
 
-    const [aimodel, setAimodel] = useState([]);
-    const [position, setPosition] = useState([]);
+    const [aimodel, setAimodel] = useState(null);
+    const [position, setPosition] = useState({});
 
     useEffect(() => {
         axios.post("/aimodel", {symbol: 'BNBUSDT'})
@@ -28,13 +30,18 @@ const Engine = () => {
                 setPosition(response.data);
                 console.log('position fetched: ', typeof position, 'include position', position);
             });
-    }, [])
+    }, [aimodel, position])
 
 
     return (
         <>
-            <div>
-                <p className={"hor-ver-centered"}>Welcome Engine Page {position.created_at} !</p>
+            <div className="container mt-3">
+
+                <p>Welcome Engine Page!</p>
+                <Card
+                    aimodel={aimodel}
+                    position={position}
+                />
             </div>
         </>
     )
