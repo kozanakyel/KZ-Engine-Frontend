@@ -1,23 +1,35 @@
 import React from 'react'
+import Icon from "react-crypto-icons";
 
 const Card = (props) => {
     const aimodel = props.aimodel;
     const position = props.position;
+
+    const signalStyle = {
+        background: position.position === 1 ? 'green' : 'red'
+    };
 
     return <>
         <div className="card bg-dark text-warning" style={{width: "36rem"}}>
                 <div className="card-body">
                     {aimodel &&
                         <>
-                            <h5 className="card-title">{aimodel.symbol} AI Model</h5>
+                            <h5 className="card-title"><Icon name={aimodel.hashtag} size={25} /> {aimodel.symbol} AI Model</h5>
                             <p className="card-text">Source: {aimodel.source} Exchange</p>
                             <p className="card-text">AI Model Type: {aimodel.ai_type}</p>
                             <p className="card-text">Feature Counts: {aimodel.feature_counts}</p>
                             <p className="card-text">AI Model Name: {aimodel.model_name}</p>
+                            <p className="card-text">Accuracy Score: {aimodel.accuracy_score}</p>
                         </>
                     }
                     {position &&
-                        <p className="card-text font-weight-bold">Signal: {position.position === 1 ? "BUY" : "SELL"} for {position.datetime_t}</p>
+                        <p className="card-text font-weight-bold">
+                            {position.position === 1 ? (
+                                <span style={signalStyle}>Signal: BUY</span>
+                            ) : (
+                                <span style={signalStyle}>Signal: SELL</span>
+                            )} for {position.datetime_t}
+                        </p>
                     }
 
                 </div>

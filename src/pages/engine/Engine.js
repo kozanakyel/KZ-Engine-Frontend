@@ -19,7 +19,7 @@ const Engine = () => {
                 setAimodel(response.data);
                 console.log('aimodel fetched: ', typeof aimodel, 'include aimodel', aimodel);
             });
-    }, [])
+    }, [aimodel])
 
     useEffect(() => {
         axios.post("/position", {symbol: 'BNBUSDT'})
