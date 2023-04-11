@@ -1,5 +1,7 @@
 import React from 'react'
-import Icon from "react-crypto-icons";
+
+
+import CryptoIcon from "../cryptoIcon/CryptoIcon";
 
 const Card = (props) => {
     const aimodel = props.aimodel;
@@ -14,7 +16,7 @@ const Card = (props) => {
                 <div className="card-body">
                     {aimodel &&
                         <>
-                            <h5 className="card-title"><Icon name={aimodel.hashtag} size={25} /> {aimodel.symbol} AI Model</h5>
+                            <h5 className="card-title"><CryptoIcon cryptoId={"binancecoin"} /> {aimodel.symbol} AI Model</h5>
                             <p className="card-text">Source: {aimodel.source} Exchange</p>
                             <p className="card-text">AI Model Type: {aimodel.ai_type}</p>
                             <p className="card-text">Feature Counts: {aimodel.feature_counts}</p>

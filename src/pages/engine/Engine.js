@@ -19,7 +19,7 @@ const Engine = () => {
                 setAimodel(response.data);
                 console.log('aimodel fetched: ', typeof aimodel, 'include aimodel', aimodel);
             });
-    }, [aimodel])
+    }, [])
 
     useEffect(() => {
         axios.post("/position", {symbol: 'BNBUSDT'})
@@ -30,14 +30,12 @@ const Engine = () => {
                 setPosition(response.data);
                 console.log('position fetched: ', typeof position, 'include position', position);
             });
-    }, [aimodel, position])
+    }, [])
 
 
     return (
         <>
-            <div className="container mt-3">
-
-                <p>Welcome Engine Page!</p>
+            <div className="hor-ver-centered m-3">
                 <Card
                     aimodel={aimodel}
                     position={position}
