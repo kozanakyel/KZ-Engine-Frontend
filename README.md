@@ -8,7 +8,7 @@ It is designed with AI, also supported with Live tracker
 Twitter Sentiment Analysis and Xgboost(Desicion Trees) for 
 specific strategies and complex Deep Learning Modelling Architecture
 
-![Home Screen](./assets/homemain.png)
+![Home Screen](public/images/homemain.png)
 
 In the project directory, you can run:
 
