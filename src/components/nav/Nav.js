@@ -6,7 +6,7 @@ const Nav = () => {
         <nav className="navbar navbar-expand-md navbar-light bg-warning">
             <div className="container-fluid">
 
-                <Link to="/" className="navbar-brand">KZEngine.AI</Link>
+                <Link to="/" className="navbar-brand"><img src={"/images/kozanlogo.png"} alt="profiler" style={{ width:"50px"}} />Engine.ai</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

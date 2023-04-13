@@ -8,9 +8,6 @@ const Header = (props) => {
         <div className="p-5 text-center bg-dark" style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}>
             <h1 className="mb-3 text-warning">KZEngine AI</h1>
 
-
-
-
             <div className="container mb-3">
                 <div className="row">
                     <div className="col-sm">
