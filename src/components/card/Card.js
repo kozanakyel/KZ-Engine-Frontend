@@ -1,36 +1,37 @@
 import React from 'react'
 
-
 import CryptoIcon from "../cryptoIcon/CryptoIcon";
 
 const Card = (props) => {
-    const aimodel = props.aimodel;
-    const position = props.position;
+    const signalTracker = props.signalTracker;
+    const fModel = props.fModel;
+    const cr = props.cr;
 
     const signalStyle = {
-        background: position.position === 1 ? 'green' : 'red'
+        background: signalTracker.signal === 1 ? 'green' : 'red'
     };
 
     return <>
         <div className="card bg-dark text-warning" style={{width: "36rem"}}>
                 <div className="card-body">
-                    {aimodel &&
+                    {signalTracker &&
                         <>
-                            <h5 className="card-title"><CryptoIcon cryptoId={"binancecoin"} /> {aimodel.symbol} AI Model</h5>
-                            <p className="card-text">Source: {aimodel.source} Exchange</p>
-                            <p className="card-text">AI Model Type: {aimodel.ai_type}</p>
-                            <p className="card-text">Feature Counts: {aimodel.feature_counts}</p>
-                            <p className="card-text">AI Model Name: {aimodel.model_name}</p>
-                            <p className="card-text">Accuracy Score: {aimodel.accuracy_score}</p>
+                            <h5 className="card-title"><CryptoIcon cryptoId={"binancecoin"} /> {fModel.symbol} AI Model</h5>
+                            <p className="card-text">Source: {fModel.source} Exchange</p>
+                            <p className="card-text">AI Model Type: {fModel.ai_type}</p>
+                            <p className="card-text">Feature Counts: {fModel.feature_counts}</p>
+                            <p className="card-text">AI Model Name: {fModel.model_name}</p>
+                            <p className="card-text">Evaluated Tweet Counts: {signalTracker.tweet_counts}</p>
+                            <p className="card-text">Accuracy Score: {fModel.accuracy_score}</p>
                         </>
                     }
-                    {position &&
+                    {signalTracker &&
                         <p className="card-text font-weight-bold">
-                            {position.position === 1 ? (
+                            {signalTracker.signal === 1 ? (
                                 <span style={signalStyle}>Signal: BUY</span>
                             ) : (
                                 <span style={signalStyle}>Signal: SELL</span>
-                            )} for {position.datetime_t}
+                            )} for {signalTracker.datetime_t}
                         </p>
                     }
 
