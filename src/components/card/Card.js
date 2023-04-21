@@ -4,8 +4,8 @@ import CryptoIcon from "../cryptoIcon/CryptoIcon";
 
 const Card = (props) => {
     const signalTracker = props.signalTracker;
-    const fModel = props.fModel;
-    const cr = props.cr;
+    const forecastModel = props.forecastModel;
+    const crypto = props.crypto;
 
     const signalStyle = {
         background: signalTracker.signal === 1 ? 'green' : 'red'
@@ -16,13 +16,13 @@ const Card = (props) => {
                 <div className="card-body">
                     {signalTracker &&
                         <>
-                            <h5 className="card-title"><CryptoIcon cryptoId={"binancecoin"} /> {fModel.symbol} AI Model</h5>
-                            <p className="card-text">Source: {fModel.source} Exchange</p>
-                            <p className="card-text">AI Model Type: {fModel.ai_type}</p>
-                            <p className="card-text">Feature Counts: {fModel.feature_counts}</p>
-                            <p className="card-text">AI Model Name: {fModel.model_name}</p>
+                            <h5 className="card-title"><CryptoIcon cryptoId= {crypto.name} /> {forecastModel.symbol} AI Model</h5>
+                            <p className="card-text">Source: {forecastModel.source} Exchange</p>
+                            <p className="card-text">AI Model Type: {forecastModel.ai_type}</p>
+                            <p className="card-text">Feature Counts: {forecastModel.feature_counts}</p>
+                            <p className="card-text">AI Model Name: {forecastModel.model_name}</p>
                             <p className="card-text">Evaluated Tweet Counts: {signalTracker.tweet_counts}</p>
-                            <p className="card-text">Accuracy Score: {fModel.accuracy_score}</p>
+                            <p className="card-text">Accuracy Score: {forecastModel.accuracy_score}</p>
                         </>
                     }
                     {signalTracker &&

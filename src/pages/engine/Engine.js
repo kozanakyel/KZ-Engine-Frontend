@@ -11,21 +11,11 @@ const Engine = () => {
     const [aimodel, setAimodel] = useState(null);
     const [position, setPosition] = useState({});
     const [signal, setSignal] = useState({});
-    const [fModel, setfModel] = useState({});
-    const [cr, setCr] = useState({});
+    const [forecastModel, setForecastModel] = useState({});
+    const [crypto, setCrypto] = useState({});
 
 
     useEffect(() => {
-        const options = {
-            params: {
-                symbol: "BNBUSDT",
-                interval: "1h",
-                ai_type: "XgboostForecaster",
-            },
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
 
         axios.post("/signal_tracker", {symbol: "BNBUSDT",
             interval: "1h",
@@ -35,8 +25,8 @@ const Engine = () => {
                 //console.log('signal_tracker response Data', response.data);
                 //console.log('signal_tracker response Data', response.status);
                 setSignal(response.data);
-                setfModel(response.data.forecast_model)
-                setCr((response.data.forecast_model.crypto))
+                setForecastModel(response.data.forecast_model)
+                setCrypto((response.data.forecast_model.crypto))
                 console.log('signal_tracker fetched: ', response.data.forecast_model.symbol, 'include aimodel');
             }).catch(function (error) {
             console.log(error);
@@ -75,8 +65,8 @@ const Engine = () => {
 
                  <Card
                  signalTracker={signal}
-                 fModel={fModel}
-                 cr={cr}
+                 forecastModel={forecastModel}
+                 crypto={crypto}
                  />
 
 
