@@ -21,7 +21,8 @@ const Header = (props) => {
 
                 </div>
             </div>
-            <Link className="btn btn-warning" to="/engine" role="button" style={{fontWeight:"bold"}}>Try Forecasting</Link>
+            <Link className="btn btn-warning m-3" to="/engine" state={{interval:"1h"}} role="button" style={{fontWeight:"bold"}}>Try Engine 1 Hour</Link>
+            <Link className="btn btn-warning m-3" to="/engine" state={{interval:"2h"}} role="button" style={{fontWeight:"bold"}}>Try Engine 2 hour</Link>
 
         </div>
     </>

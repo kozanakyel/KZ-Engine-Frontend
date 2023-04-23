@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 import axios from "../../utils/axios";
@@ -15,11 +16,13 @@ const Engine = () => {
     //const [crypto, setCrypto] = useState({});
 
     const [allSignals, setAllSignals] = useState([])
+    const location = useLocation();
+    const data = location.state;
 
     useEffect(() => {
 
         axios.post("/signal_tracker_all", {
-            interval: "1h",
+            interval: data.interval,
             ai_type: "XgboostForecaster"
         })
             .then(function (response) {

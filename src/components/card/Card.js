@@ -23,6 +23,7 @@ const Card = (props) => {
                             <p className="card-text">AI Model Name: {forecastModel?.model_name}</p>
                             <p className="card-text">Evaluated Tweet Counts: {signalTracker?.tweet_counts}</p>
                             <p className="card-text">Accuracy Score: {forecastModel?.accuracy_score}</p>
+                            <p className="card-text">Created at: {signalTracker?.created_at}</p>
                         </>
                     }
                     {signalTracker &&
