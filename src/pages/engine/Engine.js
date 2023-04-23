@@ -8,32 +8,54 @@ import Card from "../../components/card/Card";
 
 const Engine = () => {
 
-    const [aimodel, setAimodel] = useState(null);
-    const [position, setPosition] = useState({});
-    const [signal, setSignal] = useState({});
-    const [forecastModel, setForecastModel] = useState({});
-    const [crypto, setCrypto] = useState({});
+    //const [aimodel, setAimodel] = useState(null);
+    //const [position, setPosition] = useState({});
+    //const [signal, setSignal] = useState({});
+    //const [forecastModel, setForecastModel] = useState({});
+    //const [crypto, setCrypto] = useState({});
 
+    const [allSignals, setAllSignals] = useState([])
 
     useEffect(() => {
+
+        axios.post("/signal_tracker_all", {
+            interval: "1h",
+            ai_type: "XgboostForecaster"
+        })
+            .then(function (response) {
+                //console.log('signal_tracker response', response);
+                //console.log('signal_tracker_all response Data', response.data);
+                //console.log('signal_tracker response Data', response.status);
+                setAllSignals(response.data);
+                //setForecastModel(response.data?.forecast_model)
+                //setCrypto((response.data?.forecast_model?.crypto))
+
+            }).catch(function (error) {
+            console.log(error);
+        });
+    }, [])
+
+    //console.log('signal_tracker fetched: ', signal.forecast_model?.symbol, 'include aimodel');
+    /**
+     *
+     useEffect(() => {
 
         axios.post("/signal_tracker", {symbol: "BNBUSDT",
             interval: "1h",
             ai_type: "XgboostForecaster"})
             .then(function (response) {
                 //console.log('signal_tracker response', response);
-                //console.log('signal_tracker response Data', response.data);
+                console.log('signal_tracker response Data', response.data);
                 //console.log('signal_tracker response Data', response.status);
                 setSignal(response.data);
-                setForecastModel(response.data.forecast_model)
-                setCrypto((response.data.forecast_model.crypto))
-                console.log('signal_tracker fetched: ', response.data.forecast_model.symbol, 'include aimodel');
+                setForecastModel(response.data?.forecast_model)
+                setCrypto((response.data?.forecast_model?.crypto))
+
             }).catch(function (error) {
             console.log(error);
         });
     }, [])
 
-    /**
     useEffect(() => {
         axios.post("/aimodel", {symbol: 'BNBUSDT'})
             .then(function (response) {
@@ -61,17 +83,17 @@ const Engine = () => {
 
     return (
         <>
-            <div className="hor-ver-centered m-3">
+            {allSignals.map((signal) => (
+            <div key={signal.ticker} className={"hor-ver-centered m-3"}>
 
-                 <Card
-                 signalTracker={signal}
-                 forecastModel={forecastModel}
-                 crypto={crypto}
-                 />
-
-
+                <Card
+                    signalTracker={signal}
+                    forecastModel={signal?.forecast_model}
+                    crypto={signal?.forecast_model?.crypto}
+                />
 
             </div>
+            ))}
         </>
     )
 }
