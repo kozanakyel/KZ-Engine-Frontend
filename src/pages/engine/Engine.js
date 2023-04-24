@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import axios from "../../utils/axios";
 
 import Card from "../../components/card/Card";
+import Footer from "../../components/footer/Footer";
 
 
 const Engine = () => {
@@ -97,6 +98,7 @@ const Engine = () => {
 
             </div>
             ))}
+            <Footer />
         </>
     )
 }
