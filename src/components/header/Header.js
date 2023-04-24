@@ -11,7 +11,7 @@ const Header = (props) => {
             <div className="container mb-3">
                 <div className="row">
                     <div className="col-sm">
-                        <p className="mb-3 text-light">{props.content}</p>
+                        <p className="mb-3 text-light" style={{fontWeight:'bold'}}>{props.content}</p>
                     </div>
                     {/**
                     <div className="col-sm">
@@ -23,6 +23,7 @@ const Header = (props) => {
             </div>
             <Link className="btn btn-warning m-3" to="/engine" state={{interval:"1h"}} role="button" style={{fontWeight:"bold"}}>Try Engine 1 Hour</Link>
             <Link className="btn btn-warning m-3" to="/engine" state={{interval:"2h"}} role="button" style={{fontWeight:"bold"}}>Try Engine 2 hour</Link>
+            <Link className="btn btn-warning m-3" to="/" role="button" style={{fontWeight:"bold"}}>Whitepaper</Link>
 
         </div>
     </>

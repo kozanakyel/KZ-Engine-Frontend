@@ -11,29 +11,34 @@ const Card = (props) => {
         background: signalTracker?.signal === 1 ? 'green' : 'red'
     };
 
+    function capitilaze(str){
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
     return <>
         <div className="card bg-dark text-warning m-3" style={{width: "36rem"}}>
                 <div className="card-body">
                     {signalTracker &&
                         <>
                             <h5 className="card-title"><CryptoIcon cryptoId= {crypto?.name} /> {forecastModel?.symbol} AI Model</h5>
-                            <p className="card-text">Source: {forecastModel?.source} Exchange</p>
-                            <p className="card-text">AI Model Type: {forecastModel?.ai_type}</p>
-                            <p className="card-text">Feature Counts: {forecastModel?.feature_counts}</p>
-                            <p className="card-text">AI Model Name: {forecastModel?.model_name}</p>
-                            <p className="card-text">Evaluated Tweet Counts: {signalTracker?.tweet_counts}</p>
-                            <p className="card-text">Accuracy Score: {forecastModel?.accuracy_score}</p>
-                            <p className="card-text">Created at: {signalTracker?.created_at}</p>
+                            <ul className="list-group list-group-flush">
+                                <li className="list-group-item bg-dark text-light">Source: {capitilaze(forecastModel?.source)} Exchange</li>
+                                <li className="list-group-item bg-dark text-light">AI Model Type: {forecastModel?.ai_type}</li>
+                                <li className="list-group-item bg-dark text-light">Feature Counts: {forecastModel?.feature_counts}</li>
+                                <li className="list-group-item bg-dark text-light">AI Model Name: {forecastModel?.model_name.slice(5, -5)}</li>
+                                <li className="list-group-item bg-dark text-light">Evaluated Tweet Counts: {signalTracker?.tweet_counts}</li>
+                                <li className="list-group-item bg-dark text-light">Accuracy Score: {forecastModel?.accuracy_score}</li>
+
+                                    {signalTracker.signal === 1 ? (
+                                        <li className="list-group-item bg-success text-light">
+                                    <span style={signalStyle}>Signal: BUY</span> for {signalTracker?.datetime_t}</li>
+                                ) : (
+                                        <li className="list-group-item bg-danger text-light">
+                                    <span style={signalStyle}>Signal: SELL</span> for {signalTracker?.datetime_t}</li>
+                                )}
+
+                            </ul>
                         </>
-                    }
-                    {signalTracker &&
-                        <p className="card-text font-weight-bold">
-                            {signalTracker.signal === 1 ? (
-                                <span style={signalStyle}>Signal: BUY</span>
-                            ) : (
-                                <span style={signalStyle}>Signal: SELL</span>
-                            )} for {signalTracker?.datetime_t}
-                        </p>
                     }
 
                 </div>
