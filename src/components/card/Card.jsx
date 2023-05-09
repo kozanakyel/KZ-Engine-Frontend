@@ -1,6 +1,7 @@
 import React from 'react'
 
 import CryptoIcon from "../cryptoIcon/CryptoIcon";
+import ChartComponent from "@/components/chartComponent/ChartComponent";
 
 const Card = (props) => {
     const signalTracker = props.signalTracker;
@@ -38,8 +39,12 @@ const Card = (props) => {
                                 )}
 
                             </ul>
+                            <ChartComponent
+                                backtestData = {JSON.parse(signalTracker?.backtest_returns_data)}
+                            />
                         </>
                     }
+
 
                 </div>
         </div>
