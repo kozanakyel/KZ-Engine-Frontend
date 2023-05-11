@@ -9,6 +9,7 @@ const ChartComponent = (props) => {
 
     const formattedDates = Object.keys(chartData.creturns).filter(Boolean).map(timestamp => {
         const date = new Date(parseInt(timestamp));
+        date.setHours(date.getHours() - 2);   // beacues backed uses binance timezone end sen 3 hour later results
         return date.toLocaleString(); // You can format the date string as desired using the toLocaleString method
     });
 
