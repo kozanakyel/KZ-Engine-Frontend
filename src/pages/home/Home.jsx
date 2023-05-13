@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
 import FlowComponent from "@/components/flowComponent/FlowComponent";
+import KzengineDiagram from "@/components/kzengineDiagram/KzengineDiagram";
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
     return <>
         <Header content={homeHeader} />
         <FlowComponent />
+        <KzengineDiagram />
         <Footer />
     </>
 
