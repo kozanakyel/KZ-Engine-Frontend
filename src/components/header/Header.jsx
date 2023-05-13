@@ -2,16 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-    const image = "/images/archopt_cover.png";
+    const image = "/images/darkbgorange.jpg";
+
+    const homeHeader = <h5 className="text-lg text-uppercase">Welcome<br></br><br></br> Try our forecasting engine
+        for next 1 hour and 1 day BUY/SELL SIGNAL.<br></br> It is designed with AI, also supported with
+        Live Tracker Sentiment Analysis and Desicion Trees for Bitcoin, Ethereum, Binance coin</h5>
 
     return <>
         <div className="p-5 text-center bg-dark" style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}>
-            <h1 className="mb-3 text-warning">KZEngine AI</h1>
+            <h1 className="display-1 mb-3 text-warning">KZEngine AI</h1>
 
             <div className="container mb-3">
                 <div className="row">
                     <div className="col-sm">
-                        <p className="mb-3 text-light" style={{fontWeight:'bold'}}>{props.content}</p>
+                        {homeHeader}
                     </div>
                 </div>
             </div>
