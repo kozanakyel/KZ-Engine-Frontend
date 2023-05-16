@@ -28,12 +28,13 @@ function KzengineDiagram() {
         };
     }, []);
 
-    const containerHeight = windowSize.width < 600 ? '80vh' : '800';
-    const actualNodes = windowSize.width < 600 ? verticallyNodes : horizontallyNodes;
+    const containerHeight = windowSize.width < 800 ? '80vh' : '800';
+    const actualNodes = windowSize.width < 800 ? verticallyNodes : horizontallyNodes;
 
     return (<>
                 <div className="hor-ver-centered bg-dark">
                     <h3 className="m-3 text-light">Signal Generator Pipeline</h3>
+                    <p>{containerHeight}</p>
                 </div>
                 <div className="hor-ver-centered bg-dark">
                     <div className="flow-container" style={{  height: containerHeight }}>
