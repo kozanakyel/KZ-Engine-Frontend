@@ -42,8 +42,8 @@ function KzengineDiagram() {
                             nodes={actualNodes}
                             edges={edges}
                         >
-                        <Background />
-                        <Controls />
+                            <Background />
+                            <Controls />
                         </ReactFlow>
                     </div>
                 </div>

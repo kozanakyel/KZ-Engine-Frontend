@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 import FlowComponent from "@/components/flowComponent/FlowComponent";
-import KzengineDiagram from "@/components/kzengineDiagram/KzengineDiagram";
+import KzengineDiagram from "@/components/KzengineDiagram/KzengineDiagram";
 
 const Home = () => {
 
