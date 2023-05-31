@@ -7,11 +7,11 @@ const Nav = () => {
       <nav className="navbar navbar-expand-md navbar-light bg-warning">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            <img
-              src={'/images/kozanlogo.png'}
-              alt="profiler"
-              style={{ width: '50px' }}
-            />
+            {/*<img*/}
+            {/*  src={'/images/kozanlogo.png'}*/}
+            {/*  alt="profiler"*/}
+            {/*  style={{ width: '50px' }}*/}
+            {/*/>*/}
             GPTVERSE
           </Link>
           <button

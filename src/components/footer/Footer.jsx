@@ -24,7 +24,7 @@ const Footer = () => <footer className="page-footer text-warning bg-dark font-sm
                     <li><a className="text-warning"
                               href="https://github.com/kozanakyel/KZ-Forecasting-Engine-Backend"
                               target="_blank"
-                              style={{fontWeight:"bold"}}>Github KZEngine
+                              style={{fontWeight:"bold"}}>GPTVERSE AI Engine
                         </a>
                     </li>
 
@@ -34,7 +34,7 @@ const Footer = () => <footer className="page-footer text-warning bg-dark font-sm
     </div>
 
     <div className="footer-copyright text-center py-3">© 2023 Copyright:
-        <a className="text-warning" href="#!" style={{fontWeight:"bold"}}> Kozan Ugur AKYEL</a>
+        <a className="text-warning" href="#!" style={{fontWeight:"bold"}}>GPTVERSE CORP.</a>
     </div>
 
 </footer>
