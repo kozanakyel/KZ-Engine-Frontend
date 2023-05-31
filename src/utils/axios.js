@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KZ_URL = 'https://2b28-161-97-89-37.ngrok-free.app';
+const KZ_URL = 'https://83d3-161-97-89-37.ngrok-free.app';
 
 export default axios.create({
     baseURL: KZ_URL

@@ -11,7 +11,7 @@ import ChartComponent from "@/components/chartComponent/ChartComponent";
 const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
   const location = useLocation();
-  const data = location.state;
+  let data = location.state;
 
   useEffect(() => {
     axios
