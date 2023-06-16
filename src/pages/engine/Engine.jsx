@@ -6,7 +6,7 @@ import axios from '../../utils/axios';
 
 import Card from '../../components/card/Card';
 import Footer from '../../components/footer/Footer';
-import ChartComponent from "@/components/chartComponent/ChartComponent";
+import ChartComponent from '@/components/chartComponent/ChartComponent';
 
 const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
