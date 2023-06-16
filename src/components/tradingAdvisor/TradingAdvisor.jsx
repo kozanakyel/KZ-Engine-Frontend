@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from '../../utils/axios';
 
-const AIProjectAssistant = () => {
-  const [f1Query, setF1Query] = useState('');
+const TradingAdvisor = () => {
+  const [symbol, setSymbol] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -12,8 +12,8 @@ const AIProjectAssistant = () => {
     setLoading(true);
 
     try {
-      const requestBody = { f1_query: f1Query };
-      const res = await axios.post('/ai_project_assistant', requestBody);
+      const requestBody = { symbol };
+      const res = await axios.post('/trading_advisor', requestBody);
 
       setResponse(res.data.response);
       setLoading(false);
@@ -26,7 +26,10 @@ const AIProjectAssistant = () => {
   return (
     <div className="container hor-ver-centered">
       <div className={'hor-ver-centered m-3 row'}>
-        <h3 className={'hor-ver-centered m-3 row'}>Ask Anything About Me!</h3>
+        <h3 className={'hor-ver-centered m-3 row'}>Trading Advisor Hourly</h3>
+        <p className={'hor-ver-centered m-3 row '}>
+          hint: use like BTC-USD, ETH-USD, BNB-USD...
+        </p>
         <form onSubmit={handleSubmit}>
           <div className="row align-items-center">
             <div className="col-2"></div>
@@ -35,8 +38,8 @@ const AIProjectAssistant = () => {
                 id="f1Query"
                 type="text"
                 className="form-control"
-                value={f1Query}
-                onChange={(e) => setF1Query(e.target.value)}
+                value={symbol}
+                onChange={(e) => setSymbol(e.target.value)}
               />
             </div>
             <div className="col-2">
@@ -63,4 +66,4 @@ const AIProjectAssistant = () => {
   );
 };
 
-export default AIProjectAssistant;
+export default TradingAdvisor;

@@ -4,6 +4,7 @@ import Footer from '@/components/footer/Footer';
 import FlowComponent from '@/components/flowComponent/FlowComponent';
 import KzengineDiagram from '@/components/kzengineDiagram/KzengineDiagram';
 import AIProjectAssistant from '../../components/aiProjectAssistant/AIProjectAssistant';
+import TradingAdvisor from '../../components/tradingAdvisor/TradingAdvisor';
 
 const Home = () => {
   const homeHeader =
@@ -16,6 +17,7 @@ const Home = () => {
       <Header content={homeHeader} />
       <AIProjectAssistant />
       <FlowComponent />
+      <TradingAdvisor />
       <KzengineDiagram />
       <Footer />
     </>
