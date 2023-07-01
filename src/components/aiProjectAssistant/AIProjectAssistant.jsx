@@ -12,8 +12,8 @@ const AIProjectAssistant = () => {
     setLoading(true);
 
     try {
-      const requestBody = { f1_query: f1Query };
-      const res = await axios.post('/ai_project_assistant', requestBody);
+      const requestBody = { query: f1Query };
+      const res = await axios.post('/ai_assistant', requestBody);
 
       setResponse(res.data.response);
       setLoading(false);
