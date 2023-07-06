@@ -17,7 +17,7 @@ const Home = () => {
       <Header content={homeHeader} />
       <AIProjectAssistant />
       <FlowComponent />
-      <TradingAdvisor />
+      {/* <TradingAdvisor /> */}
       <KzengineDiagram />
       <Footer />
     </>

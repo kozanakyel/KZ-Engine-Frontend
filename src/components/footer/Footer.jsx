@@ -8,6 +8,7 @@ const Footer = () => <footer className="page-footer text-warning bg-dark font-sm
                 <h5 className="text-uppercase">GPTVERSE AI</h5>
                 <p>Always Imagine. Go forward and make it! If you want any help. Our team wil be your side.</p>
             </div>
+            
 
             <hr className="clearfix w-100 d-md-none pb-0"/>
 
