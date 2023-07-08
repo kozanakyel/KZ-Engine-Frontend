@@ -7,12 +7,12 @@ const Nav = () => {
       <nav className="navbar navbar-expand-md navbar-light bg-warning">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            {/*<img*/}
-            {/*  src={'/images/kozanlogo.png'}*/}
-            {/*  alt="profiler"*/}
-            {/*  style={{ width: '50px' }}*/}
-            {/*/>*/}
-            GPTVERSE
+            <img
+            src={'/images/kozanlogo.png'}
+            alt="profiler"
+            style={{ width: '50px' }}
+            /> 
+            KAYZEE
           </Link>
           <button
             className="navbar-toggler"

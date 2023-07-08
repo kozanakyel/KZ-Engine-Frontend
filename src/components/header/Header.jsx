@@ -10,7 +10,7 @@ const Header = (props) => {
 
     return <>
         <div className="p-5 text-center bg-dark" style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}>
-            <h1 className="display-1 mb-3 text-warning">GPTVERSE AI</h1>
+            <h1 className="display-1 mb-3 text-warning">KZENGINE AI</h1>
 
             <div className="container mb-3">
                 <div className="row">
