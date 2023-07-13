@@ -15,7 +15,7 @@ const Engine = () => {
   useEffect(() => {
     axios
       .post('/signal_tracker_all', {
-        interval: data?.interval, // get from header component button click
+        interval: data?.interval,  // get from header component button click
         ai_type: 'XgboostBinaryForecaster', // default value
       })
       .then(function (response) {
