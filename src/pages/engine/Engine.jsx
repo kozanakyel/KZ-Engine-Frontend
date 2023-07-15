@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 import axios from '../../utils/axios';
@@ -11,11 +12,12 @@ const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
   const location = useLocation();
   let data = location.state;
+  const { interval } = useParams();
 
   useEffect(() => {
     axios
       .post('/signal_tracker_all', {
-        interval: data?.interval,  // get from header component button click
+        interval: interval, // get from header component button click
         ai_type: 'XgboostBinaryForecaster', // default value
       })
       .then(function (response) {
@@ -25,6 +27,7 @@ const Engine = () => {
         console.log(error);
       });
   }, []);
+  console.log(interval + 'yes interval');
 
   return (
     <>

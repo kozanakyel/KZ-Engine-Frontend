@@ -12,7 +12,7 @@ const Nav = () => {
             alt="profiler"
             style={{ width: '50px' }}
             /> 
-            KAYZEE
+            
           </Link>
           <button
             className="navbar-toggler"

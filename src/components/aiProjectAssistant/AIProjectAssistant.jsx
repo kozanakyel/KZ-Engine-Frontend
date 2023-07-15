@@ -26,7 +26,7 @@ const AIProjectAssistant = () => {
   return (
     <div className="container hor-ver-centered">
       <div className={'hor-ver-centered m-3 row'}>
-        <h3 className={'hor-ver-centered m-3 row'}>Ask Anything About Me!</h3>
+        <h3 className={'hor-ver-centered m-3 row'}>KZ AI Assistant</h3>
         <form onSubmit={handleSubmit}>
           <div className="row align-items-center">
             <div className="col-2"></div>
