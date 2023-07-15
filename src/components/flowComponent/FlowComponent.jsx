@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FlowComponent = () => {
-    const image = "/images/strateji2.png";
 
     const infoApp1 = <p className="lead mb-3 text-dark">The objective of this project is to use various
         techniques such as <mark><strong>Decision Trees, Sentiment Analysis with Natural Language Processing

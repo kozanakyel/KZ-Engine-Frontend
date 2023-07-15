@@ -14,6 +14,7 @@ export default defineConfig({
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
   },
+
   test: {
     css: false,
     include: ['src/**/__tests__/*'],
