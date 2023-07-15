@@ -5,6 +5,7 @@ const AIProjectAssistant = () => {
   const [f1Query, setF1Query] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,6 +20,7 @@ const AIProjectAssistant = () => {
       setLoading(false);
     } catch (error) {
       console.error('Error occurred while fetching data:', error);
+      setError("We're sorry, but we're currently experiencing some difficulties. We are working on it for a better product experience.");
       setLoading(false);
     }
   };
@@ -48,6 +50,12 @@ const AIProjectAssistant = () => {
         {loading ? (
           <div className="spinner-border text-primary" role="status">
             <span className="sr-only"></span>
+          </div>
+        ) : error ? (
+          <div className="row m-3">
+            <div className="col p-3 border border-info">
+              <p className="text-danger">{error}</p> {/* Display error message */}
+            </div>
           </div>
         ) : (
           response && (

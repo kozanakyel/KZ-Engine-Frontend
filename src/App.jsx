@@ -5,11 +5,13 @@ import MetaMaskInstall from './components/metaMaskInstall/MetaMaskInstall';
 import MetaMaskConnect from './components/metaMaskConnect/MetaMaskConnect';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import { useLocation } from "react-router-dom";
 
 function App() {
   const [isMetaMaskInstalled, setMetaMaskInstalled] = useState(false);
   const [address, setAddress] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     async function getAccount() {
@@ -25,10 +27,11 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (address) {
+    console.log("path: " + location.pathname);
+    if (address &&  !location.pathname.startsWith("/engine")) {
       navigate("/");
     }
-  }, [address, navigate]);
+  }, [address, location.pathname, navigate]);
 
   return (
     <>

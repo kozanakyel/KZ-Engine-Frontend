@@ -10,37 +10,56 @@ import Footer from '../../components/footer/Footer';
 
 const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
-  let data = location.state;
   const { interval } = useParams();
 
+  const [requestCount, setRequestCount] = useState(0);
+
   useEffect(() => {
+    setRequestCount((prevCount) => prevCount + 1);
+
     axios
       .post('/signal_tracker_all', {
-        interval: interval, // get from header component button click
-        ai_type: 'XgboostBinaryForecaster', // default value
+        interval: interval,
+        ai_type: 'XgboostBinaryForecaster',
       })
       .then(function (response) {
         setAllSignals(response.data);
+        setIsLoading(false);
+        console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
   }, []);
-  console.log(interval + 'yes interval');
+
+  console.log(interval + ' yes interval');
+
+  console.log('Request Count:', requestCount);
 
   return (
     <>
-      {allSignals.map((signal) => (
-        <div key={signal.ticker} className={'hor-ver-centered m-3'}>
-          <Card
-            signalTracker={signal}
-            forecastModel={signal?.forecast_model}
-            crypto={signal?.forecast_model?.crypto}
-          />
+      {isLoading ? (
+        <div className="container hor-ver-centered">
+          <div className="spinner-border text-primary" role="status">
+            <span className="sr-only">Loading...</span>
+          </div>
         </div>
-      ))}
-      <Footer />
+      ) : (
+        <>
+          {allSignals.map((signal) => (
+            <div key={signal.ticker} className="container hor-ver-centered m-3">
+              <Card
+                signalTracker={signal}
+                forecastModel={signal?.forecast_model}
+                crypto={signal?.forecast_model?.crypto}
+              />
+            </div>
+          ))}
+          <Footer />
+        </>
+      )}
     </>
   );
 };
