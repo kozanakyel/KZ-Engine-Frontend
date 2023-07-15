@@ -5,6 +5,7 @@ import FlowComponent from '@/components/flowComponent/FlowComponent';
 import KzengineDiagram from '@/components/kzengineDiagram/KzengineDiagram';
 import AIProjectAssistant from '../../components/aiProjectAssistant/AIProjectAssistant';
 import TradingAdvisor from '../../components/tradingAdvisor/TradingAdvisor';
+import KzaiAssistant from '../../components/kzaiAssistant/KzaiAssistant';
 
 const Home = () => {
   const homeHeader =
@@ -19,6 +20,7 @@ const Home = () => {
       <FlowComponent />
       {/* <TradingAdvisor /> */}
       <KzengineDiagram />
+      <KzaiAssistant />
       <Footer />
     </>
   );
