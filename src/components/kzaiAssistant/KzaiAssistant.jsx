@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 const KzaiAssistant = () => {
   const infoApp1 = (
@@ -17,6 +18,22 @@ const KzaiAssistant = () => {
     </p>
   );
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const imageUrl = windowWidth < 800 ? '/images/scal11.png' : "/images/kzaiassist.png";
+
   return (
     <>
       <div className="p-5 text-center bg-light">
@@ -31,7 +48,7 @@ const KzaiAssistant = () => {
             <div className="col-sm d-flex justify-content-center">
               <img
                 height={"auto"}
-                src="/images/kzaiassist.png"
+                src={imageUrl}
                 alt="Diagram"
                 className="img-fluid"
               />
