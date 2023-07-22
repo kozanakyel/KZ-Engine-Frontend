@@ -43,7 +43,9 @@ const Engine = () => {
     <>
       {isLoading ? (
         <div className="container hor-ver-centered">
-          <div className="coming-soon">Coming Soon</div>
+          <div className="coming-soon bg-warning">
+            <img src="/images/kozanlogo.png" width={'75px'}/>
+          </div>
         </div>
       ) : (
         <>
