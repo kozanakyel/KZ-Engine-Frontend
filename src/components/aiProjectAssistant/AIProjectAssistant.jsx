@@ -20,7 +20,9 @@ const AIProjectAssistant = () => {
       setLoading(false);
     } catch (error) {
       console.error('Error occurred while fetching data:', error);
-      setError("We're sorry, but we're currently experiencing some difficulties. We are working on it for a better product experience.");
+      setError(
+        "Oops! We're fine-tuning our AI for an even smarter future. Please stay tuned!",
+      );
       setLoading(false);
     }
   };
@@ -42,7 +44,7 @@ const AIProjectAssistant = () => {
               />
             </div>
             <div className="col-2">
-              <input type="submit" className="btn btn-primary" value="Submit" />
+              <input type="submit" className="btn btn-warning" value="Send" />
             </div>
           </div>
         </form>
@@ -54,7 +56,8 @@ const AIProjectAssistant = () => {
         ) : error ? (
           <div className="row m-3">
             <div className="col p-3 border border-info">
-              <p className="text-danger">{error}</p> {/* Display error message */}
+              <p className="text-danger">{error}</p>{' '}
+              {/* Display error message */}
             </div>
           </div>
         ) : (

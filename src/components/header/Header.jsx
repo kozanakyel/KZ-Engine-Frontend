@@ -16,7 +16,7 @@ const Header = (props) => {
   //  style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}
   return (
     <>
-      <div className="p-5 text-center bg-light text-dark">
+      <div className="p-5 text-center bg-warning text-dark mt-5">
         <h1 className="display-1 mb-3">KZENGINE AI</h1>
 
         <div className="container mb-3">
@@ -25,7 +25,7 @@ const Header = (props) => {
           </div>
         </div>
         <Link
-          className="btn btn-warning m-3"
+          className="btn btn-success m-3"
           to="/engine/1h"
           role="button"
           style={{ fontWeight: 'bold' }}
@@ -33,7 +33,7 @@ const Header = (props) => {
           Try Engine Hourly
         </Link>
         <Link
-          className="btn btn-warning m-3"
+          className="btn btn-success m-3"
           to="/engine/1d"
           role="button"
           style={{ fontWeight: 'bold' }}
@@ -41,7 +41,7 @@ const Header = (props) => {
           Try Engine Daily
         </Link>
         <Link
-          className="btn btn-warning m-3"
+          className="btn btn-success m-3"
           to="/"
           role="button"
           style={{ fontWeight: 'bold' }}

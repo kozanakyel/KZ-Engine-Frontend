@@ -7,6 +7,7 @@ import axios from '../../utils/axios';
 
 import Card from '../../components/card/Card';
 import Footer from '../../components/footer/Footer';
+import './engine.css';
 
 const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
@@ -42,9 +43,7 @@ const Engine = () => {
     <>
       {isLoading ? (
         <div className="container hor-ver-centered">
-          <div className="spinner-border text-primary" role="status">
-            <span className="sr-only">Loading...</span>
-          </div>
+          <div className="coming-soon">Coming Soon</div>
         </div>
       ) : (
         <>

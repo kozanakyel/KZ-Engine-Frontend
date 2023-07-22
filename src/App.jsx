@@ -37,16 +37,16 @@ function App() {
     <>
       <Nav />
       <Routes>
-        {!isMetaMaskInstalled ? (
+        {/* {!isMetaMaskInstalled ? (
           <Route path="*" element={<MetaMaskInstall />} />
         ) : !address ? (
           <Route path="*" element={<MetaMaskConnect setAddress={setAddress} />} />
-        ) : (
+        ) : ( */}
           <>
             <Route path="/" element={<Home />} />
             <Route path="/engine/:interval" element={<Engine />} />
           </>
-        )}
+        {/* )} */}
       </Routes>
     </>
   );

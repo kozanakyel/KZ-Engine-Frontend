@@ -4,15 +4,14 @@ import { Outlet, Link } from 'react-router-dom';
 const Nav = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md navbar-light bg-warning">
+      <nav className="navbar navbar-expand-md navbar-light bg-warning fixed-top">
         <div className="container-fluid">
           <Link to="/" className="navbar-brand">
             <img
-            src={'/images/kozanlogo.png'}
-            alt="profiler"
-            style={{ width: '50px' }}
-            /> 
-            
+              src={'/images/kozanlogo.png'}
+              alt="profiler"
+              style={{ width: '50px' }}
+            />
           </Link>
           <button
             className="navbar-toggler"
@@ -26,11 +25,16 @@ const Nav = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav me-auto mb-2 mb-md-0">
+            <ul className="navbar-nav ms-auto mb-2 mb-md-0">
               <li className="nav-item">
-                {/*<Link to="/engine" className="nav-link active">*/}
-                {/*  Try Engine*/}
-                {/*</Link>*/}
+                <Link to="/engine/1h" className="nav-link active" style={{textDecoration: "underline"}}>
+                  Hourly Engine
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/engine/1d" className="nav-link active" style={{textDecoration: "underline"}}>
+                  Daily Engine
+                </Link>
               </li>
             </ul>
           </div>
