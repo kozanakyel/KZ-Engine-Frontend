@@ -35,9 +35,9 @@ const Engine = () => {
       });
   }, []);
 
-  console.log(interval + ' yes interval');
+  // console.log(interval + ' yes interval');
 
-  console.log('Request Count:', requestCount);
+  // console.log('Request Count:', requestCount);
 
   
 

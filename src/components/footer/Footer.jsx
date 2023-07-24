@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-  <footer className="page-footer text-warning bg-dark font-small pt-4 mt-5">
+  <footer className="page-footer text-warning bg-dark font-small pt-4">
     <div className="container-fluid text-center text-md-left">
       <div className="row">
         <div className="col-md-6 mt-md-0 mt-3">

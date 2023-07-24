@@ -17,27 +17,37 @@ const Card = (props) => {
   }
 
   function regexCandleStick(str) {
-    if (str.startsWith('NO')) return str;
+    if (str.startsWith('NO'))
+      return (
+        <>
+          <ul>
+            <li className="list-group-item bg-info text-light">
+              {str}
+            </li>
+          </ul>
+        </>
+      );
     else if (str.endsWith('Bear'))
       return (
         <>
-          <li className="list-group-item bg-danger text-light">
-            {'Bearish - ' + str.slice(3, -5)}
-          </li>
+          <ul>
+            <li className="list-group-item bg-danger text-light">
+              {'Bearish - ' + str.slice(3, -5)}
+            </li>
+          </ul>
         </>
       );
     else if (str.endsWith('Bull'))
       return (
         <>
-          <li className="list-group-item bg-success text-light">
-            {'Bullish - ' + str.slice(3, -5)}
-          </li>
+          <ul>
+            <li className="list-group-item bg-success text-light">
+              {'Bullish - ' + str.slice(3, -5)}
+            </li>
+          </ul>
         </>
       );
   }
-
-  const bestFeatures = JSON.parse(signalTracker?.backtest_returns_data)
-  console.log(bestFeatures);
 
   return (
     <>
@@ -63,11 +73,11 @@ const Card = (props) => {
                   Candlestick Signal:{' '}
                   {regexCandleStick(signalTracker?.japanese_candle)}
                 </li>
-                {signalTracker?.tweet_counts > 0 && (
-                  <li className="list-group-item bg-dark text-light">
-                    Evaluated Tweet Counts: {signalTracker?.tweet_counts}
-                  </li>
-                )}
+                <li className="list-group-item bg-dark text-light">
+                  Best Important Features:{' '}
+                  {signalTracker?.backtest_returns_data}
+                </li>
+
                 <li className="list-group-item bg-dark text-light">
                   Accuracy Score: {forecastModel?.accuracy_score}
                 </li>
