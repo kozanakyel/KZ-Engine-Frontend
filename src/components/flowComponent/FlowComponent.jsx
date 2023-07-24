@@ -2,7 +2,7 @@ import React from 'react';
 
 const FlowComponent = () => {
 
-    const infoApp1 = <p className="lead mb-3 text-dark">The objective of this project is to use various
+    const infoApp1 = <p className=" mb-3 text-dark">The objective of this project is to use various
         techniques such as <mark><strong>Decision Trees, Sentiment Analysis with Natural Language Processing
         and Japanese Candlestick Art</strong></mark> to forecast the structure of the next candle for popular
         cryptocurrencies like Bitcoin, Ethereum, Binance coin.

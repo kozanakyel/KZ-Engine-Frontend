@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 const KzaiAssistant = () => {
   const infoApp1 = (
-    <p className="lead mb-3 text-dark">
+    <p className="mb-3 text-dark">
       The KZ AI Assistant powered to LLM process and this assistant can select
       which part of the conversation in it.
       <mark>

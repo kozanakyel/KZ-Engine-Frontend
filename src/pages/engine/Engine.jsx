@@ -8,6 +8,7 @@ import axios from '../../utils/axios';
 import Card from '../../components/card/Card';
 import Footer from '../../components/footer/Footer';
 import './engine.css';
+import SentimentCircleChart from '../../components/sentimentCircleChart/SentimentCircleChart';
 
 const Engine = () => {
   const [allSignals, setAllSignals] = useState([]);
