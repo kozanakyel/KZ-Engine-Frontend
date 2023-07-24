@@ -26,7 +26,7 @@ const Card = (props) => {
                                 <li className="list-group-item bg-dark text-light">Source: {capitilaze(forecastModel?.source)} Exchange</li>
                                 <li className="list-group-item bg-dark text-light">AI Model Type: {forecastModel?.ai_type}</li>
                                 <li className="list-group-item bg-dark text-light">Feature Counts: {forecastModel?.feature_counts}</li>
-                                <li className="list-group-item bg-dark text-light">AI Model Name: {forecastModel?.model_name.slice(5, -5)}</li>
+                                <li className="list-group-item bg-dark text-light">Candlestick Signal: {signalTracker?.japanese_candle}</li>
                                 {signalTracker?.tweet_counts > 0 && (
                                     <li className="list-group-item bg-dark text-light">Evaluated Tweet Counts: {signalTracker?.tweet_counts}</li>
                                 )}

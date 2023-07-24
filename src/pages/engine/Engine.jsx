@@ -49,6 +49,7 @@ const Engine = () => {
         </div>
       ) : (
         <>
+        <div className='container' style={{marginTop:'100px'}}>
           {allSignals.map((signal) => (
             <div key={signal.ticker} className="container hor-ver-centered m-3">
               <Card
@@ -58,6 +59,7 @@ const Engine = () => {
               />
             </div>
           ))}
+          </div>
           <Footer />
         </>
       )}
