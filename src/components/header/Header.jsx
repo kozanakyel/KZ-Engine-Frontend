@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
-  const image = '/images/darkbgorange.jpg';
-
   const homeHeader = (
     <h5 className="text-lg text-uppercase">
       Welcome<br></br>
@@ -12,6 +10,10 @@ const Header = (props) => {
       Sentiment Analysis and Desicion Trees for Bitcoin, Ethereum, Binance coin
     </h5>
   );
+
+  const whitepaper =
+    'https://drive.google.com/file/d/17yn5cYuB-K-O3js6i_9kyifOd8iXYCX2/view?usp=sharing';
+  const whitepaperURL = new URL(whitepaper);
 
   //  style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}
   return (
@@ -40,14 +42,15 @@ const Header = (props) => {
         >
           Try Engine Daily
         </Link>
-        <Link
+        <a
           className="btn btn-success m-3"
-          to="/"
+          href={whitepaperURL}
+          target="_blank"
           role="button"
           style={{ fontWeight: 'bold' }}
         >
           Whitepaper
-        </Link>
+        </a>
       </div>
     </>
   );
