@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = (props) => {
+const Header = () => {
   const homeHeader = (
     <h5 className="text-lg text-uppercase">
       Welcome<br></br>
@@ -41,6 +41,14 @@ const Header = (props) => {
           style={{ fontWeight: 'bold' }}
         >
           Try Engine Daily
+        </Link>
+        <Link
+          className="btn btn-success m-3"
+          to="/sentiment"
+          role="button"
+          style={{ fontWeight: 'bold' }}
+        >
+          Sentiment Tracker
         </Link>
         <a
           className="btn btn-success m-3"

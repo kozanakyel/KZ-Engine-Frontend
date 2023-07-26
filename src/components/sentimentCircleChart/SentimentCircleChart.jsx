@@ -39,12 +39,12 @@ const SentimentCircleChart = () => {
   };
 
   return (
-    <div className="card text-center bg-dark">
+    <div className="card text-center" style={{backgroundColor:'black'}}>
       <div className="card-body">
         <div className="m-3 text-center text-light">
-          <h5 className="text-warning text-lg text-uppercase">
+          <h1 className="text-warning text-lg text-uppercase mb-5">
             Twitter Sentiment Score
-          </h5>
+          </h1>
           <p>
             This Sentiment Score obtained from specific twitter phenomenon and
             getting their tweets. Those people selected via the graph

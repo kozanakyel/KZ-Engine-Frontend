@@ -28,7 +28,7 @@ const SentimentCard = () => {
   return (
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Sentiment Analysis</h5>
+        <h5 className="card-title">Twitter Sentiment Tracker</h5>
         {sentimentData.length > 0 ? (
           <SentimentChart data={sentimentData} />
         ) : (

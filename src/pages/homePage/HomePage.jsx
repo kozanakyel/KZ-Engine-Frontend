@@ -10,17 +10,13 @@ import SentimentCircleChart from '../../components/sentimentCircleChart/Sentimen
 import SentimentCard from '../../components/sentimentCard/SentimentCard';
 import JapaneseCandlestickChart from '../../components/japaneseCandlestickChart/JapaneseCandlestickChart';
 
-const Home = () => {
-  const homeHeader =
-    'Welcome, You can try our cyptocurrency price movement forecasting engine ' +
-    'for next 1 hour and 1 day BUY/SELL SIGNAL. It is designed with AI, also supported with' +
-    ' Live Tracker Sentiment Analysis and Desicion Trees for Bitcoin, Ethereum, Binance coin';
+const HomePage = () => {
 
   return (
     <>
-      <Header content={homeHeader} />
+      <Header />
       <AIProjectAssistant />
-      <SentimentCircleChart sentimentScore={-0.1} />
+      <SentimentCircleChart />
       <SentimentCard />
       {/* <JapaneseCandlestickChart /> */}
       <FlowComponent />
@@ -32,4 +28,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
