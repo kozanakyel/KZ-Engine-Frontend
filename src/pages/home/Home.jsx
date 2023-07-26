@@ -7,6 +7,7 @@ import AIProjectAssistant from '../../components/aiProjectAssistant/AIProjectAss
 import TradingAdvisor from '../../components/tradingAdvisor/TradingAdvisor';
 import KzaiAssistant from '../../components/kzaiAssistant/KzaiAssistant';
 import SentimentCircleChart from '../../components/sentimentCircleChart/SentimentCircleChart';
+import SentimentCard from '../../components/sentimentCard/SentimentCard';
 
 const Home = () => {
   const homeHeader =
@@ -19,6 +20,7 @@ const Home = () => {
       <Header content={homeHeader} />
       <AIProjectAssistant />
       <SentimentCircleChart sentimentScore={-0.1} />
+      <SentimentCard />
       <FlowComponent />
       {/* <TradingAdvisor /> */}
       <KzengineDiagram />
