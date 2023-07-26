@@ -22,7 +22,7 @@ const Home = () => {
       <AIProjectAssistant />
       <SentimentCircleChart sentimentScore={-0.1} />
       <SentimentCard />
-      <JapaneseCandlestickChart />
+      {/* <JapaneseCandlestickChart /> */}
       <FlowComponent />
       {/* <TradingAdvisor /> */}
       <KzengineDiagram />
