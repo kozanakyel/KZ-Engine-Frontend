@@ -14,7 +14,6 @@ const EnginePage = () => {
   const { interval } = useParams();
 
   useEffect(() => {
-
     axios
       .post('/signal_tracker_all', {
         interval: interval,
@@ -23,33 +22,49 @@ const EnginePage = () => {
       .then(function (response) {
         setAllSignals(response.data);
         setIsLoading(false);
-        console.log(response.data);
+        // console.log(response.data);
       })
       .catch(function (error) {
         console.log(error);
       });
-  }, []);  
+  }, []);
 
   return (
     <>
       {isLoading ? (
         <div className="container hor-ver-centered">
           <div className="coming-soon bg-warning">
-            <img src="/images/kozanlogo.png" width={'75px'}/>
+            <img src="/images/kozanlogo.png" width={'75px'} />
           </div>
         </div>
       ) : (
         <>
-        <div className='container' style={{marginTop:'100px'}}>
-          {allSignals.map((signal) => (
-            <div key={signal.ticker} className="container hor-ver-centered m-3">
-              <Card
-                signalTracker={signal}
-                forecastModel={signal?.forecast_model}
-                crypto={signal?.forecast_model?.crypto}
-              />
-            </div>
-          ))}
+          <div className="container text-center" style={{ marginTop: '100px' }}>
+            <h3 className="text-warning">
+              {interval === '1h'
+                ? 'Hourly Forecasting Engine'
+                : 'Daily Forecasting Engine'}
+            </h3>
+            <p>
+              This created Machine Learning Engine shows succes for pattern
+              matching and getting signal from our AI model with its accuracy
+              statistic. Also it detects Japanese Candlestick Structure from the
+              price, dont forget each candlestick structure guve some insigths
+              about next candle prediction and we represents as a signal for
+              you.
+            </p>
+            {allSignals.map((signal) => (
+              <div
+                key={signal.ticker}
+                className="container hor-ver-centered m-3"
+              >
+                <Card
+                  signalTracker={signal}
+                  forecastModel={signal?.forecast_model}
+                  crypto={signal?.forecast_model?.crypto}
+                />
+              </div>
+            ))}
           </div>
           <Footer />
         </>

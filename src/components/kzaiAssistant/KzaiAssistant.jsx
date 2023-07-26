@@ -37,7 +37,7 @@ const KzaiAssistant = () => {
   return (
     <>
       <div className="p-5 text-center bg-light">
-        <h3 className="text-dark">KZ AI Assistant Diagram</h3>
+        <h1 className="text-dark">KZ AI Assistant Diagram</h1>
         <div className="container mb-3">
           <div className="row">
             <div className="col-sm align-self-center">
@@ -47,6 +47,7 @@ const KzaiAssistant = () => {
           <div className="row">
             <div className="col-sm d-flex justify-content-center">
               <img
+                width={"850px"}
                 height={"auto"}
                 src={imageUrl}
                 alt="Diagram"

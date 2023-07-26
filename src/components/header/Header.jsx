@@ -7,7 +7,7 @@ const Header = () => {
       Welcome<br></br>
       <br></br> Try our forecasting engine for next 1 hour and 1 day BUY/SELL
       SIGNAL.<br></br> It is designed with AI, also supported with Live Tracker
-      Sentiment Analysis and Desicion Trees for Bitcoin, Ethereum, Binance coin
+      Sentiment Analysis, Desicion Trees and Japanse Candlestick Art for Bitcoin, Ethereum and Binance coin.
     </h5>
   );
 

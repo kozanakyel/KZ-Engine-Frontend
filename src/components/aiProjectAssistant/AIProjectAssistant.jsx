@@ -21,7 +21,7 @@ const AIProjectAssistant = () => {
     } catch (error) {
       console.error('Error occurred while fetching data:', error);
       setError(
-        "Oops! We're fine-tuning our AI for an even smarter future. Please stay tuned!",
+        "Oops! We're reached daily request limit for KayZee AI assistant. Please try again tomorrow!",
       );
       setLoading(false);
     }

@@ -36,6 +36,11 @@ const Nav = () => {
                   Daily Engine
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/sentiment" className="nav-link active" style={{textDecoration: "underline"}}>
+                  Sentiment Tracker
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
