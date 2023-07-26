@@ -27,6 +27,9 @@ const SentimentChart = ({ data }) => {
         type: 'time',
         time: {
           unit: 'hour',
+          displayFormats: {
+            hour: 'yyy-MM-dd HH:mm', // Customize the datetime format as needed
+          },
         },
       },
       y: {

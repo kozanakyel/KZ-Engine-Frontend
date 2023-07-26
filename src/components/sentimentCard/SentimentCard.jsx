@@ -18,7 +18,7 @@ const SentimentCard = () => {
         }));
         const slicedFormattedData = formattedData.slice(0,100);
         setSentimentData(slicedFormattedData);
-        console.log(slicedFormattedData);
+        // console.log(slicedFormattedData);
       })
       .catch(function (error) {
         console.log(error);

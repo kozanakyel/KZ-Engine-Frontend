@@ -1,7 +1,23 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import { useEffect, useState } from 'react';
+import axios from '../../utils/axios';
 
-const SentimentCircleChart = ({ sentimentScore }) => {
+const SentimentCircleChart = () => {
+
+  const [sentimentScore, setSentimentScore] = useState(0);
+
+  useEffect(() => {
+    axios
+      .post('/last_sentiment')
+      .then(function (response) {
+        setSentimentScore(response.data.sentiment_score);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
+
   const percentage = (sentimentScore + 1) * 50; // Map sentimentScore from [-1, 1] to [0, 100]
 
   const data = {
