@@ -8,6 +8,7 @@ import TradingAdvisor from '../../components/tradingAdvisor/TradingAdvisor';
 import KzaiAssistant from '../../components/kzaiAssistant/KzaiAssistant';
 import SentimentCircleChart from '../../components/sentimentCircleChart/SentimentCircleChart';
 import SentimentCard from '../../components/sentimentCard/SentimentCard';
+import JapaneseCandlestickChart from '../../components/japaneseCandlestickChart/JapaneseCandlestickChart';
 
 const Home = () => {
   const homeHeader =
@@ -21,6 +22,7 @@ const Home = () => {
       <AIProjectAssistant />
       <SentimentCircleChart sentimentScore={-0.1} />
       <SentimentCard />
+      <JapaneseCandlestickChart />
       <FlowComponent />
       {/* <TradingAdvisor /> */}
       <KzengineDiagram />
