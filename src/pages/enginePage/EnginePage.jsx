@@ -49,7 +49,7 @@ const EnginePage = () => {
               This created Machine Learning Engine shows succes for pattern
               matching and getting signal from our AI model with its accuracy
               statistic. Also it detects Japanese Candlestick Structure from the
-              price, dont forget each candlestick structure guve some insigths
+              price, dont forget each candlestick structure gives some insigths
               about next candle prediction and we represents as a signal for
               you.
             </p>
