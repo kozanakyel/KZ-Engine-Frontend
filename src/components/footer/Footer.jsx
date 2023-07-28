@@ -27,16 +27,16 @@ const Footer = () => (
         </div>
 
         <div className="col-md-3 mb-md-0 mb-3">
-          <h5 className="text-uppercase">Socials</h5>
+          <h5 className="text-uppercase">Linkedn</h5>
           <ul className="list-unstyled">
             <li>
               <a
                 className="text-warning"
-                href="https://github.com/kozanakyel/KZ-Forecasting-Engine-Backend"
+                href="https://www.linkedin.com/company/kzai/"
                 target="_blank"
                 style={{ fontWeight: 'bold' }}
               >
-                KZENGINE AI Engine
+                KZENGINE AI
               </a>
             </li>
           </ul>
