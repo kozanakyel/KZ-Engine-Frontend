@@ -12,7 +12,7 @@ const Header = () => {
   );
 
   const whitepaper =
-    'https://drive.google.com/file/d/17yn5cYuB-K-O3js6i_9kyifOd8iXYCX2/view?usp=sharing';
+    'https://drive.google.com/file/d/1CzcQj2OgGlSkk_z0pgPUNx5PUI0DpJcB/view?usp=sharing';
   const whitepaperURL = new URL(whitepaper);
 
   //  style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}
