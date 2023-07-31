@@ -6,6 +6,7 @@ import 'chartjs-adapter-date-fns'; // Import the date adapter
 import './main.css';
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
