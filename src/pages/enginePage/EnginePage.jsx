@@ -27,7 +27,7 @@ const EnginePage = () => {
       .catch(function (error) {
         console.log(error);
       });
-  }, []);
+  }, [interval]);
 
   return (
     <>
@@ -54,10 +54,7 @@ const EnginePage = () => {
               you.
             </p>
             {allSignals.map((signal) => (
-              <div
-                key={signal.ticker}
-                className="container hor-ver-centered m-3"
-              >
+              <div key={signal.ticker} className="container hor-ver-centered">
                 <Card
                   signalTracker={signal}
                   forecastModel={signal?.forecast_model}

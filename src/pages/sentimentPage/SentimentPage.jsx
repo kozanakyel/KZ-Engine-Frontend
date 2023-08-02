@@ -7,7 +7,7 @@ const SentimentPage = () => {
   return (
     <>
     
-      <div style={{marginTop:'100px'}}>
+      <div style={{marginTop:'100px', backgroundColor:'black'}}>
         <SentimentCircleChart />
         <SentimentCard />
         <Footer />

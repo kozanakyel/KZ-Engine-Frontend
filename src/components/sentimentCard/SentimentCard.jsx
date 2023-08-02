@@ -26,9 +26,9 @@ const SentimentCard = () => {
   }, []);
 
   return (
-    <div className="card text-center">
+    <div className="card text-center text-warning" style={{backgroundColor:'black'}}>
       <div className="card-body">
-        <h5 className="card-title">Twitter Sentiment Tracker</h5>
+        <h3 className="card-title">Twitter Sentiment Tracker</h3>
         {sentimentData.length > 0 ? (
           <SentimentChart data={sentimentData} />
         ) : (
