@@ -32,10 +32,10 @@ function KzengineDiagram() {
     const actualNodes = windowSize.width < 800 ? verticallyNodes : horizontallyNodes;
 
     return (<>
-                <div className="hor-ver-centered bg-dark">
-                    <h3 className="m-3 text-light">Signal Generator Pipeline</h3>
+                <div className="pt-5 m-5 hor-ver-centered" style={{borderTop: '1px solid white'}}>
+                    <h1 className="text-warning">Signal Generator Pipeline</h1>
                 </div>
-                <div className="hor-ver-centered bg-dark">
+                <div className="hor-ver-centered">
                     <div className="flow-container" style={{  height: containerHeight }}>
                         <ReactFlow
                             nodes={actualNodes}

@@ -6,8 +6,8 @@ const InfoSection = (props) => {
     const colorApp = props.color;
 
     return <>
-        <div className={"p-5 text-center bg-"+colorApp}>
-            <h1 className="text-warning font-weight-bold">{headerApp}</h1>
+        <div className={"pt-5 m-5 text-center bg-"+colorApp}  style={{borderTop: '1px solid white'}}>
+            <h1 className="text-warning font-weight-bold ">{headerApp}</h1>
             <div className="container mb-3">
                 <div className="row">
                     <div className="col-sm align-self-center">
