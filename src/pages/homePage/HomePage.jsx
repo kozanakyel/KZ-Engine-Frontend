@@ -35,19 +35,31 @@ const HomePage = () => {
     </p>
   );
 
+  const kayzeeAsssitant = (
+    <p className=" mb-3 text-light">
+      <li>Powered to LLM process</li>
+      <li>Langchain framework supported</li>
+      <li>Embedding and GPT opeartion used</li>
+      <li>Vectorstore and Indexed application.</li>
+      <li>Get and ask trading advice wisely.</li>
+    </p>
+  );
+
 
   return (
     <>
       <Header />
       <AIProjectAssistant />
-      <InfoSection info={infoApp1} head={"Project Purposes"} color={""} />
+      <InfoSection info={infoApp1} head={"Project Purposes"} color={""} image={'/images/dmpurpose.png'}/>
       <InfoSection info={infoSentiment} head={"Sentiment Tracker"} color={""} />
+      <InfoSection info={kayzeeAsssitant} head={"KayZee Assistant"} color={""} image={'/images/kzaiassist.png'}/>
       {/* <SentimentCircleChart /> */}
       {/* <SentimentCard /> */}
       {/* <JapaneseCandlestickChart /> */}
       {/* <TradingAdvisor /> */}
       <KzengineDiagram />
-      <KzaiAssistant />
+      
+      {/* <KzaiAssistant /> */}
       <Footer />
     </>
   );
