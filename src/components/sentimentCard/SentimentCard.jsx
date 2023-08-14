@@ -12,11 +12,11 @@ const SentimentCard = () => {
         // Extract the 'data' property from the Axios response
         const responseData = response.data;
         // Convert the datetime_t strings to JavaScript Date objects
-        const formattedData = responseData.map(item => ({
+        const formattedData = responseData.map((item) => ({
           ...item,
           datetime_t: new Date(item.datetime_t),
         }));
-        const slicedFormattedData = formattedData.slice(0,100);
+        const slicedFormattedData = formattedData.slice(0, 100);
         setSentimentData(slicedFormattedData);
         // console.log(slicedFormattedData);
       })
@@ -26,7 +26,10 @@ const SentimentCard = () => {
   }, []);
 
   return (
-    <div className="card text-center text-warning" style={{backgroundColor:'black'}}>
+    <div
+      className="card text-center text-warning"
+      style={{ backgroundColor: 'black' }}
+    >
       <div className="card-body">
         <h3 className="card-title">Twitter Sentiment Tracker</h3>
         {sentimentData.length > 0 ? (
