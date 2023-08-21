@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-const KZ_URL = 'https://4f37-161-97-89-37.ngrok-free.app';
+const KZ_URL = import.meta.env.VITE_KZ_GLB_URL;
+// console.log(KZ_URL)
 
-// const KZ_URL = 'http://127.0.0.1:5005';
 
 export default axios.create({
     baseURL: KZ_URL
