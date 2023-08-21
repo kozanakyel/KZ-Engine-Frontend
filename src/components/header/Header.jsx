@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => {
   const homeHeader = (
     <h5 className="text-lg text-uppercase">
@@ -14,13 +13,12 @@ const Header = () => {
   );
 
   const whitepaper =
-    'https://drive.google.com/file/d/15W0UeDra0uzMxcsduAlxRjRmThb5fJy2/view?usp=sharing';
+    'https://drive.google.com/file/d/1YtaueYIfKVAdb-Uwb2419Yo_RcuCXnCU/view?usp=sharing';
   const whitepaperURL = new URL(whitepaper);
 
   //  style={{height:'600px', marginTop:'0px', backgroundImage: `url(${image})`}}
   return (
     <>
-
       <div
         className="p-5 text-center text-dark bg-warning mt-5"
         style={{
@@ -46,7 +44,7 @@ const Header = () => {
           <source src={'./images/teamcollabarate.mp4'} type="video/mp4" />
           Your browser does not support the video tag.
         </video> */}
-        
+
         <h1 className="display-1 mb-3">KZENGINE AI</h1>
 
         <div className="container mb-3">
