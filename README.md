@@ -9,11 +9,11 @@ Twitter Sentiment Analysis and Xgboost(Desicion Trees) for
 specific strategies and complex Deep Learning Modelling Architecture.
 Additionally we have a yrading advisor and AI assitant bot powered with openai.
 
-![Home Screen](assets/mainscreen.png)
+![Home Screen](assets/mainn.png)
 
-![Home Screen](assets/eng1.png)
+![Home Screen](assets/ethexample.png)
 
-![Home Screen](assets/eng2.png)
+![Home Screen](assets/examplescreenshots.png)
 
 In the project directory, you can run:
 
