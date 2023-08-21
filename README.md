@@ -11,7 +11,7 @@ Additionally we have a yrading advisor and AI assitant bot powered with openai.
 
 ![Home Screen](assets/mainn.png)
 
-![Home Screen](assets/ethexample.png)
+![Home Screen](assets/ethexamle.png)
 
 ![Home Screen](assets/examplescreenshots.png)
 
