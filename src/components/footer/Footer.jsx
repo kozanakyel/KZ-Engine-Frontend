@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-  <footer className="page-footer text-warning font-small pt-4" style={{borderTop: '1px solid white'}}>
+  <footer
+    className="page-footer text-warning font-small pt-4"
+    style={{ borderTop: '1px solid white' }}
+  >
     <div className="container-fluid text-center text-md-left">
       <div className="row">
         <div className="col-md-6 mt-md-0 mt-3">
@@ -27,7 +30,7 @@ const Footer = () => (
         </div>
 
         <div className="col-md-3 mb-md-0 mb-3">
-          <h5 className="text-uppercase">Linkedn</h5>
+          <h5 className="text-uppercase">Links</h5>
           <ul className="list-unstyled">
             <li>
               <a
@@ -36,7 +39,17 @@ const Footer = () => (
                 target="_blank"
                 style={{ fontWeight: 'bold' }}
               >
-                KZENGINE AI
+                KZAI - Linkedn
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-warning"
+                href="https://github.com/kozanakyel/KZ-Engine-Backend"
+                target="_blank"
+                style={{ fontWeight: 'bold' }}
+              >
+                KZEngine - Github
               </a>
             </li>
           </ul>
