@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+import CryptoIconService from '../../services/CryptoIconService';
 
 const CryptoIcon = ({ cryptoId }) => {
   const [iconUrl, setIconUrl] = useState(null);
@@ -8,10 +8,8 @@ const CryptoIcon = ({ cryptoId }) => {
   useEffect(() => {
     const fetchIcon = async () => {
       try {
-        const response = await axios.get(
-          `https://api.coingecko.com/api/v3/coins/${cryptoId}`,
-        );
-        setIconUrl(response.data.image.small);
+        const icon = await CryptoIconService(cryptoId);
+        setIconUrl(icon);
         setLoading(false);
       } catch (error) {
         console.error(error);
