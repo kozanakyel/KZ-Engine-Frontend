@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 import axios from '../../utils/axios';
-import Card from '../../components/card/Card';
+import SignalCard from '../../components/signalCard/SignalCard';
 import Footer from '../../components/footer/Footer';
 import './engine.css';
 
@@ -55,7 +55,7 @@ const EnginePage = () => {
             </p>
             {allSignals.map((signal) => (
               <div key={signal.ticker} className="container hor-ver-centered">
-                <Card
+                <SignalCard
                   signalTracker={signal}
                   forecastModel={signal?.forecast_model}
                   crypto={signal?.forecast_model?.crypto}

@@ -1,8 +1,9 @@
 import React from 'react';
 import CryptoIcon from '../cryptoIcon/CryptoIcon';
+import ChartComponent from '@/components/chartComponent/ChartComponent'; // dont extract because of import is necessary!!!
 import { regexCandleStick } from '../../utils/signalUtility';
 
-const Card = (props) => {
+const SignalCard = (props) => {
   const signalTracker = props.signalTracker;
   const forecastModel = props.forecastModel;
   const crypto = props.crypto;
@@ -58,4 +59,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default SignalCard;
