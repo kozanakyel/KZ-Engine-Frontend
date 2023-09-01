@@ -1,53 +1,11 @@
 import React from 'react';
-
 import CryptoIcon from '../cryptoIcon/CryptoIcon';
-import ChartComponent from '@/components/chartComponent/ChartComponent';
+import { regexCandleStick } from '../../utils/signalUtility';
 
 const Card = (props) => {
   const signalTracker = props.signalTracker;
   const forecastModel = props.forecastModel;
   const crypto = props.crypto;
-
-  const signalStyle = {
-    background: signalTracker?.signal === 1 ? 'green' : 'red',
-  };
-
-  function capitilaze(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
-
-  function regexCandleStick(str) {
-    if (str.startsWith('NO'))
-      return (
-        <>
-          <ul>
-            <li className="list-group-item bg-info text-light">
-              {str}
-            </li>
-          </ul>
-        </>
-      );
-    else if (str.endsWith('Bear'))
-      return (
-        <>
-          <ul>
-            <li className="list-group-item bg-danger text-light">
-              {'Bearish - ' + str.slice(3, -5)}
-            </li>
-          </ul>
-        </>
-      );
-    else if (str.endsWith('Bull'))
-      return (
-        <>
-          <ul>
-            <li className="list-group-item bg-success text-light">
-              {'Bullish - ' + str.slice(3, -5)}
-            </li>
-          </ul>
-        </>
-      );
-  }
 
   return (
     <>
@@ -92,9 +50,6 @@ const Card = (props) => {
                   </li>
                 )}
               </ul>
-              {/* <ChartComponent
-                backtestData={JSON.parse(signalTracker?.backtest_returns_data)}
-              /> */}
             </>
           )}
         </div>

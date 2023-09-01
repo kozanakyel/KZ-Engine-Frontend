@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import CryptoIconService from '../../services/CryptoIconService';
+import { CryptoIconService } from '../../services/CryptoIconService';
 
 const CryptoIcon = ({ cryptoId }) => {
   const [iconUrl, setIconUrl] = useState(null);

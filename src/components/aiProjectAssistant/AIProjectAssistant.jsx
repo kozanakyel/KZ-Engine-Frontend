@@ -9,13 +9,11 @@ const AIProjectAssistant = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     setLoading(true);
 
     try {
       const requestBody = { query: f1Query };
       const res = await axios.post('/ai_assistant', requestBody);
-
       setResponse(res.data.response);
       setLoading(false);
     } catch (error) {
